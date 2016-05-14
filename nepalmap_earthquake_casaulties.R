@@ -1,14 +1,14 @@
 #this file going to display the casaulties map 
-allCasaulties <- read.csv(file = "~/R/funwithR/data/earthquakecasultiesdata.csv")
+allCasaulties <- read.csv(file = "./data/earthquakecasultiesdata.csv")
 library(plyr)
-# library(rgeos)
-# library(maptools)
+library(rgeos)
+library(maptools)
 library(gpclib)
 library(ggplot2)
 library(scales)
 library(RColorBrewer)
 # MAP
-np_dist <- readShapeSpatial("~/R/funwithR/data/NPL_adm/NPL_adm3.shp")
+np_dist <- readShapeSpatial("~/R/NepalEarquakeCasualties/data/NPL_adm/NPL_adm3.shp")
 # VERIFY IT LOADED PROPERLY
 np_dist <- fortify(np_dist, region = "NAME_3")
 # print(head(allCasaulties))
