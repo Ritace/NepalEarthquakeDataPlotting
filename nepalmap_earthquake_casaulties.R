@@ -8,7 +8,7 @@ library(ggplot2)
 library(scales)
 library(RColorBrewer)
 # MAP
-np_dist <- readShapeSpatial("~/R/NepalEarquakeCasualties/data/NPL_adm/NPL_adm3.shp")
+np_dist <- readShapeSpatial("data/NPL_adm/NPL_adm3.shp")
 # VERIFY IT LOADED PROPERLY
 np_dist <- fortify(np_dist, region = "NAME_3")
 # print(head(allCasaulties))
